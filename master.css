@@ -1,0 +1,25 @@
+.header{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.opciones{
+    /*Permito flexibilidad de la lista*/
+    display: flex;
+    /*Quito formato de la lista*/
+    list-style-type: none;
+}
+
+.opciones li a{
+    text-decoration: none;
+    padding: 10px;
+    color: darkblue;
+}
+
+.opciones li a:hover{
+    padding: 5px;
+    background-color: rgb(247, 247, 244);
+    border-radius: 10px;
+}
