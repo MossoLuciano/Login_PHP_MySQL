@@ -1,5 +1,12 @@
 <?php
     require "header.php";
+    require "funciones.php";
+    
+	if(isset($_POST['guardar'])){
+		$email = $_POST['email'];
+		$clave = $_POST['clave'];
+		GuardarUsuario($email, $clave);
+	}
 ?>
 
 <div class="registro">
