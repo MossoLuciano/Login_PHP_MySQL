@@ -1,9 +1,5 @@
-
-/*Index.php*/
-.titulo{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: underline;
+*{
+    margin: 0;
 }
 
 /*NavBar*/
@@ -24,7 +20,7 @@
 .opciones li a{
     text-decoration: none;
     padding: 10px;
-    color: darkblue;
+    color: rgb(0, 9, 139);
 }
 
 .opciones li a:hover{
@@ -35,7 +31,8 @@
 
 /*Footer.php*/
 .footer{
-    background-color: rgb(44, 98, 116);
+    background-color: rgb(57, 44, 116);
+    padding: 10px;
 }
 
 /*Login.php*/
