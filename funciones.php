@@ -21,3 +21,32 @@
             throw new PDOException($ex->getMessage());
         }
     }
+
+    function VerificarUsuario($email, $clave){
+        try{
+            global $conexion;
+            $sql = "SELECT * FROM usuario WHERE Email = ?";
+            $resultado = $conexion->prepare($sql);
+            $resultado->bindParam(1, $email, PDO::PARAM_STR);
+            if($resultado->execute()){
+            $datos = $resultado->fetch();
+            if($datos){
+                $claveCorrecta = $datos['Clave'];
+                $emailCorrecto = $datos['Email'];
+                if(password_verify($clave, $claveCorrecta)){
+                    session_start();
+                    $_SESSION['Email'] = $emailCorrecto;
+                    header("location:operaciones.php");
+                }else{
+                    echo "Error en el ingreso. Vuelva a intentarlo";
+                }
+            }else{
+                echo "Error, vuelva a intentarlo";
+            }
+            }else{
+            echo "Ocurrio un error. Vuelva a intentarlo";
+        }
+        }catch(PDOException $ex){
+            throw new PDOException($ex->getMessage());
+        }
+    }
