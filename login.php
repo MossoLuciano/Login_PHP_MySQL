@@ -8,7 +8,7 @@
         <input type="email" name="email" class="email" placeholder="Email"><br><br>
         <input type="password" name="clave" class="clave" placeholder="Password"><br><br>
         <input type="submit" value="Ingresar" name="ingresar" class="botonIngresar"><br><br>
-        <a href="registro.php">Olvide mi clave</a>
+        <a href="registro.php">Registrarme</a>
     </form>
 </div>
 
